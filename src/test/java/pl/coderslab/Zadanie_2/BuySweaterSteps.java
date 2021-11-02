@@ -3,7 +3,6 @@ package pl.coderslab.Zadanie_2;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en_scouse.An;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
@@ -13,9 +12,6 @@ import pl.coderslab.LoginPage;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-//import ru.yandex.qatools.ashot.AShot;
-//import ru.yandex.qatools.ashot.Screenshot;
-//import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class BuySweaterSteps {
     ShopPage shopPage;
@@ -93,5 +89,10 @@ public class BuySweaterSteps {
         File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileHandler.copy(src, new File("C:\\CodersLab\\screenshot.png"));
     }
+
+//    @Then("closes browser")
+//    public void tearDown() {
+//        driver.quit();
+//    }
 
 }

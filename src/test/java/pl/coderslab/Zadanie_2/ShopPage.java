@@ -19,20 +19,6 @@ public class ShopPage {
 
     @FindBy(css = "btn.btn-primary.add-to-cart")
     WebElement addToCart;
-//
-//    @FindBy(name = "id_country")
-//    WebElement countrySelect;
-//
-//    @FindBy(name = "phone")
-//    WebElement phoneInput;
-//
-//    @FindBy(css = "btn.btn-primary.float-xs-right")
-//    WebElement submitButton;
-
-//    public ShopPage(WebDriver driver) {
-//        ShopPage.driver = driver;
-//        PageFactory.initElements(driver, this);
-//    }
 
     public static void sizePick() {
         Select sizeMenu = new Select(driver.findElement(By.name("group_1")));

@@ -65,14 +65,16 @@ public class AddAddressSteps {
 
     @Then("^user checks (.*), (.*), (.*), (.*) and (.*) in form$")
     public void checkAddress(String alias, String address, String city, String postcode, String phone) {
-        String firstAssertion = alias + "\n" + "Rafał Szczygielski\n" + address + "\n"  + city + "\n" + postcode + "\n" + "United Kingdom\n" + phone;
-        String secondAssertion = driver.findElement(By.className("address-body")).getText();
-        assertEquals(firstAssertion, secondAssertion);
+        String DEFINED_USER = "Rafał Szczygielski";
+        String DEFINED_COUNTRY = "United Kingdom";
+        String expectedValue = alias + "\n" + DEFINED_USER + "\n" + address + "\n"  + city + "\n" + postcode + "\n" + DEFINED_COUNTRY + "\n" + phone;
+        String comparisonValue = driver.findElement(By.className("address-body")).getText();
+        assertEquals(expectedValue, comparisonValue);
     }
 
-    @Then("closes browser")
-    public void tearDown() {
-        driver.quit();
-    }
+//    @Then("closes browser")
+//    public void tearDown() {
+//        driver.quit();
+//    }
 
 }

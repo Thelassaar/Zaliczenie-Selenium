@@ -16,11 +16,7 @@ Feature: Add new address
 
     Then user checks <alias>, <address>, <city>, <zip/postal code> and <phone> in form
 
-    Then closes browser
-
-#    Then removes address
-#
-#    And checks if it is removed
+#    Then closes browser
 
     Examples:
       | alias  | address     | city       | zip/postal code | phone     |
